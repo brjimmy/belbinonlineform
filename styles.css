@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.table-block {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Heading styles */
+h1, h2 {
+    text-align: left; /* Change from center to left alignment */
+    margin: 0; /* Remove default margins */
+    padding-bottom: 10px; /* Add bottom padding for spacing */
+    margin-left: 10px; /* Optional: add left margin to match table */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Hide input spinners in Chrome, Safari, Edge, and Firefox */
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    margin: 0; /* Remove margin */
+}
+
+
+
+/* Center align the header of the second column */
+table th:nth-child(2) {
+    text-align: center; /* Center align the header */
+}
+
+/* Left align content in the second column for tables A to G */
+table td:nth-child(2) {
+    text-align: left; /* Left-align text in data cells */
+}
+
+
+/* Center align text in the ninth row (Total row) for all tables A to G */
+table tr:nth-child(9) td {
+    text-align: center; /* Center align text in the total row */
+}
+
+
+
+#totalPointsA, #totalPointsB, #totalPointsC, #totalPointsD, #totalPointsE, #totalPointsF, #totalPointsG {
+    width: 70px; /* Match the width of other input boxes */
+    box-sizing: border-box; /* Ensure padding and borders are included */
+    text-align: center; /* Center align text */
+}
+
+
+/* Adjust column widths for tables A to G */
+table th:nth-child(1),
+table td:nth-child(1) {
+width: 3%; /* Adjust as needed for smaller width */
+}
+
+table th:nth-child(3),
+table td:nth-child(3) {
+    width: 5%; /* Adjust as needed for smaller width */
+}
+
+
+.points-input {
+    width: 50px; /* Or any desired width */
+	    text-align: center; /* Center align text in all input boxes */
+
+}
+
+
+
+#resultsTable input[type="number"].dynamic-input {
+    width: 35px !important; /* Force the width to apply */
+    box-sizing: border-box;
+    text-align: center;
+	border: .5 px; /* Remove borders */
+	border-color: darkgrey
+
+
+}
+
+
+#resultsTable td input.dynamic-input {
+    text-align: right; /* Center align the text within the input box */
+    margin: 0 auto; /* Center the input box within the column */
+    display: block; /* Ensures that the input box is treated as a block element to be centered */
+}
+
+
+#resultsTableBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#resultsTable {
+    margin: 0 auto;
+}
+
+
