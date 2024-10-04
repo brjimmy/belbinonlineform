@@ -1,3 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 290px; /* Adjust based on your header's height */
+}
+
+.header {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000; 
+    padding: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Other styles remain unchanged... */
+
+
+/* Header paragraph styles */
+.header-paragraph {
+    width: 100%; /* Use full width on small screens */
+    max-width: 1000px; /* Limit to table width on larger screens */
+    text-align: center; /* Center align the text */
+    margin: 10px 0; /* Space above and below */
+}
+
+/* Header line styles */
+.header-line {
+    border: 0; /* Remove default border */
+    height: 2px; /* Set height for the line */
+    background: orange; /* Line color */
+    margin: 10px 0; /* Space above and below the line */
+}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -113,6 +156,14 @@ table td:nth-child(3) {
     display: block; /* Ensures that the input box is treated as a block element to be centered */
 }
 
-
+@media (max-width: 768px) {
+    body {
+        padding: 0 5%;
+    }
+    .points-input {
+        width: 80%; /* Make input boxes wider on mobile */
+    }
+    /* Additional styles for smaller screens */
+}
 
 
