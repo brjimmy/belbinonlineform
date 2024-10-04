@@ -151,9 +151,10 @@ table td:nth-child(3) {
 
 
 #resultsTable td input.dynamic-input {
-    text-align: right; /* Center align the text within the input box */
+    text-align: center; /* Center align the text within the input box */
     margin: 0 auto; /* Center the input box within the column */
     display: block; /* Ensures that the input box is treated as a block element to be centered */
+	
 }
 
 @media (max-width: 768px) {
