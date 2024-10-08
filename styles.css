@@ -106,7 +106,7 @@ table td:nth-child(2) {
 
 
 /* Center align text in the ninth row (Total row) for all tables A to G */
-table tr:nth-child(9) td {
+table tr:nth-child(10) td {
     text-align: center; /* Center align text in the total row */
 }
 
@@ -247,3 +247,95 @@ table td:nth-child(3) {
     vertical-align: middle; /* Vertically center the content */
     font-weight: bold; /* Make the text bold */
 }
+
+
+
+/* General table styling */
+table#resultsTable {
+    width: 100%;
+    border-collapse: collapse; /* Merges borders to avoid extra spaces */
+}
+
+/* Styling for both static and dynamic cells */
+table#resultsTable th, table#resultsTable td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd; /* Adds borders around cells */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Dynamic input fields: Set the same width for input cells */
+table#resultsTable td input.dynamic-input {
+    width: 60px; /* Sets the width of all input fields */
+    padding: 5px;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* Static value cells: Set the same width for static cells */
+table#resultsTable td.static-value {
+    width: 40px; /* Adjust the width as needed */
+    color: firebrick; /* Matches the red color of the static values */
+    font-size: 17px;
+}
+
+/* Total row cells styling */
+table#resultsTable tr:last-child td {
+    width: 80px; /* You can make this wider if needed */
+}
+
+/* Optional: Total row inputs can have different widths */
+table#resultsTable tr:last-child td input.dynamic-input {
+    width: 80px !important; /* Wider for the total row */
+}
+
+
+/* Add hover effect to highlight rows in light green for the explanation table only */
+#popup table tbody tr:hover {
+    background-color: #FFDAB3;
+}
+
+
+.centered-hr {
+    width: 90%;
+    border: 1px solid #FF4713;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* Style for all buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF4713;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #FF6F3D;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Active (pressed) effect */
+button:active {
+    background-color: #FF4713;
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset Button specific styling */
+#resetButton {
+    background-color: #4A4F54;
+}
+
+#resetButton:hover {
+    background-color: #BBBBBB;
+}
+
