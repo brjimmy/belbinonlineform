@@ -11,40 +11,7 @@ tables.forEach(tableId => {
     });
 });
 
-// Add event listener for the submit button
-document.addEventListener('DOMContentLoaded', () => { // Ensure the DOM is fully loaded
-    document.getElementById('submitButton').addEventListener('click', () => {
-        // Populate dynamic inputs with corresponding points values from all tables
-               document.getElementById('contentBelow').style.display = 'block';
 
-		for (let i = 1; i <= 9; i++) {
-            for (let j = 0; j < tables.length; j++) {
-                const pointsValue = document.getElementById(`points${tables[j].charAt(tables[j].length - 1)}${i}`).value; // Get points from each table
-                document.getElementById(`dynamic-input-${i + j * 9}`).value = pointsValue; // Populate corresponding dynamic input
-            }
-        }
-
-		    window.scrollTo(0, document.body.scrollHeight);
-
-		
-        // Calculate totals for each column in Results Table
-        calculateResultsTableTotals();
-
-        // Make all input boxes disabled after submission
-        setInputsDisabled(); // Call the function to make inputs disabled
-    });
-
-    // Add event listener for the reset button
-    document.getElementById('resetButton').addEventListener('click', () => {
-        // Refresh the page and scroll to the top
-        window.scrollTo(0, 0); // Scroll to top
-        location.reload(); // Refresh the page
-		
-		
-
-		
-    });
-});
 
 function enforceLimits(input) {
     let value = parseInt(input.value) || 0;
@@ -70,7 +37,7 @@ function calculateTotal(tableId) {
     // Use correct total ID based on table ID
     const totalInput = document.getElementById('totalPoints' + tableId.charAt(tableId.length - 1));
 
-    if (total > 11) {
+    if (total > 10) {
         alert("Error: Total exceeds 10!"); // Show error as a popup
         // Clear the last entered value if total exceeds 10
         if (lastInputIndex >= 0) {
@@ -81,29 +48,7 @@ function calculateTotal(tableId) {
     }
 }
 
-function calculateResultsTableTotals() {
-    const totalIds = [64, 65, 66, 67, 68, 69, 70, 71, 72]; // IDs for total row dynamic inputs
-    const columnGroups = [
-        [1, 10, 19, 28, 37, 46, 55], // SH column
-        [2, 11, 20, 29, 38, 47, 56], // CO column
-        [3, 12, 21, 30, 39, 48, 57], // PL column
-        [4, 13, 22, 31, 40, 49, 58], // RI column
-        [5, 14, 23, 32, 41, 50, 59], // ME column
-        [6, 15, 24, 33, 42, 51, 60], // iMP column
-        [7, 16, 25, 34, 43, 52, 61], // TW column
-        [8, 17, 26, 35, 44, 53, 62],  // CF column
-		[9, 18, 27, 36, 45, 54, 63]  // SP column
-		
-    ];
 
-    columnGroups.forEach((group, index) => {
-        let columnTotal = 0;
-        group.forEach(id => {
-            columnTotal += parseInt(document.getElementById(`dynamic-input-${id}`).value) || 0;
-        });
-        document.getElementById(`dynamic-input-${totalIds[index]}`).value = columnTotal; // Set total in the respective dynamic box
-    });
-}
 
 // Function to disable inputs after submission
 function setInputsDisabled() {
