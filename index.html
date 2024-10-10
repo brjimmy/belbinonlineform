@@ -495,13 +495,18 @@
 <body>
 
 
-<div style="margin-bottom: 0px; text-align: center; display: flex; justify-content: center; gap: 20px;">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0px;">
 
-	<button id="explanation-button" style="padding: 10px 0px; font-size: 16px; width: 400px;">Explanation of Roles</button>
-	<button id="resetButton" style="padding: 10px 20px; font-size: 16px; margin: 0 38px;">Reset</button>
-    <button id="screenshot-button" style="padding: 10px 0px; font-size: 16px; width: 400px;">Take Screenshot of Results Table</button>
+    <!-- Left-aligned buttons: Explanation and Screenshot -->
+    <div style="display: flex; gap: 20px; justify-content: flex-start;">
+        <button id="explanation-button" style="padding: 10px 0px; font-size: 16px; width: 400px;">Explanation of Roles</button>
+        <button id="screenshot-button" style="padding: 10px 0px; font-size: 16px; width: 400px;">Take Screenshot of Results Table</button>
+    </div>
+
+    <!-- Right-aligned Reset button -->
+    <button id="resetButton" style="padding: 10px 20px; font-size: 16px;">Reset</button>
+
 </div>
-
 
 
 
